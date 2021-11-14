@@ -3,11 +3,12 @@ var Hocvien = require("../models/Hocvien");
 
 module.exports = function (app){
     app.get("/", function (req, res){
-        res.send("OK");
+        //res.send("OK");
+        res.render("layout");
     })
 
     app.post("/dangky", function (req, res){
-        if(!req.body.Email || !req.body.Hoten || req.body.SoDT ){
+        if(!req.body.Email || !req.body.Hoten || !req.body.SoDT ){
             res.json({ketqua: 0, maloi: "Thieu tham so"});
         }else{
             var hocvienMoi = new Hocvien({
@@ -23,7 +24,7 @@ module.exports = function (app){
                if(err){
                    res.json({ketqua:0, maloi:"Mongodb save error"});
                }else{
-                   res.json({ketqua:0, maloi:hocvienMoi});
+                   res.json({ketqua:1, maloi:hocvienMoi});
                }
            })
         }
