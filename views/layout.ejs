@@ -8,6 +8,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src = "./scripts/web3.js" ></script>
     <script src="./process.js" ></script>
+    <style>
+        #formDangKy, #danhsach{
+            background-color: antiquewhite;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        #tbDS{
+            width: 90%;
+        }
+        #dong1 td {
+            text-align: center;
+            padding: 4px;
+            border-bottom: solid 1px cornflowerblue;
+        }
+    </style>
 </head>
 <body>
 <h2>Minigame</h2>
@@ -17,6 +32,15 @@
     <input id="txtEmail" type="text" placeholder="Email" >
     <input id="txtSdt" type="text" placeholder="sdt" >
     <button id="btnDangky" >Dang ky</button>
+</div>
+<div id="danhsach" >
+    <table id="tbDS" >
+        <tr id="dong1" >
+            <td>Address</td>
+            <td>_id</td>
+        </tr>
+
+    </table>
 </div>
 </body>
 </html>
